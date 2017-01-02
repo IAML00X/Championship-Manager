@@ -4,19 +4,81 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="250.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="33.0" layoutY="44.0" />
       <TextField layoutX="33.0" layoutY="109.0" />
       <TextField layoutX="32.0" layoutY="174.0" />
-      <Label layoutX="33.0" layoutY="23.0" text="Team" />
-      <Label layoutX="31.0" layoutY="88.0" text="Points" />
-      <Label layoutX="33.0" layoutY="153.0" text="Goals" />
-      <Button layoutX="88.0" layoutY="302.0" mnemonicParsing="false" text="Cancel" />
-      <Button layoutX="174.0" layoutY="302.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="OK" />
+      <Label layoutX="33.0" layoutY="23.0" text="Team">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label layoutX="33.0" layoutY="89.0" text="Points">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="33.0" layoutY="153.0" text="Goals">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="88.0" layoutY="302.0" mnemonicParsing="false" text="Cancel">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button layoutX="174.0" layoutY="302.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="OK">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
       <TextField layoutX="32.0" layoutY="238.0" />
-      <Label layoutX="32.0" layoutY="217.0" text="Goals Taken" />
+      <Label layoutX="32.0" layoutY="217.0" text="Goals Taken">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
    </children>
 </AnchorPane>
