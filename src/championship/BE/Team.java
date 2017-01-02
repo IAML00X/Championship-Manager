@@ -16,6 +16,7 @@ public class Team {
     private String name;
     private int goalsScored;
     private int goalsRecieved;
+    private int matchesPlayed;
 
     /**
      * All the getters and setters for the Team class.
@@ -59,6 +60,14 @@ public class Team {
 
     public void setGoalsRecieved(int goalsRecieved) {
         this.goalsRecieved = goalsRecieved;
+    }
+
+    public int getMatchesPlayed() {
+        return matchesPlayed;
+    }
+
+    public void setMatchesPlayed(int matchesPlayed) {
+        this.matchesPlayed = matchesPlayed;
     }
 
 }
