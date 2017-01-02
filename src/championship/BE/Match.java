@@ -11,4 +11,28 @@ package championship.BE;
  */
 public class Match {
 
+    private int firstTeamScore;
+    private int secondTeamScore;
+    private boolean isDraw;
+
+    public int getFirstTeamScore() {
+        return firstTeamScore;
+    }
+
+    public void setFirstTeamScore(int firstTeamScore) {
+        this.firstTeamScore = firstTeamScore;
+    }
+
+    public int getSecondTeamScore() {
+        return secondTeamScore;
+    }
+
+    public void setSecondTeamScore(int secondTeamScore) {
+        this.secondTeamScore = secondTeamScore;
+    }
+
+    public boolean isIsDraw() {
+        return isDraw;
+    }
+
 }
