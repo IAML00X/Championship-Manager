@@ -17,6 +17,10 @@ public class Team {
     private int goalsScored;
     private int goalsRecieved;
 
+    /**
+     * All the getters and setters for the Team class.
+     *
+     */
     public int getId() {
         return id;
     }

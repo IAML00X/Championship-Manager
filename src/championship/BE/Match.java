@@ -15,6 +15,11 @@ public class Match {
     private int secondTeamScore;
     private boolean isDraw;
 
+    /**
+     * All the getters and setters for the Match class.
+     *
+     * @return
+     */
     public int getFirstTeamScore() {
         return firstTeamScore;
     }
