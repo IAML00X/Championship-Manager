@@ -11,33 +11,31 @@ package championship.BE;
  */
 public class Match {
 
-    private int firstTeamScore;
-    private int secondTeamScore;
+    private int homeTeamScore;
+    private int guestTeamScore;
     private boolean isDraw;
 
     /**
      * All the getters and setters for the Match class.
      *
-     * @return
      */
-    public int getFirstTeamScore() {
-        return firstTeamScore;
+    public int getHomeTeamScore() {
+        return homeTeamScore;
     }
 
-    public void setFirstTeamScore(int firstTeamScore) {
-        this.firstTeamScore = firstTeamScore;
+    public void setHomeTeamScore(int homeTeamScore) {
+        this.homeTeamScore = homeTeamScore;
     }
 
-    public int getSecondTeamScore() {
-        return secondTeamScore;
+    public int getGuestTeamScore() {
+        return guestTeamScore;
     }
 
-    public void setSecondTeamScore(int secondTeamScore) {
-        this.secondTeamScore = secondTeamScore;
+    public void setGuestTeamScore(int guestTeamScore) {
+        this.guestTeamScore = guestTeamScore;
     }
 
     public boolean isIsDraw() {
         return isDraw;
     }
-
 }

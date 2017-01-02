@@ -11,4 +11,6 @@ package championship.BE;
  */
 public class Group {
 
+    private String id;
+
 }
