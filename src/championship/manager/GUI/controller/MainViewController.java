@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package championship.manager;
+package championship.manager.GUI.controller;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -17,7 +17,7 @@ import javafx.stage.Stage;
  *
  * @author IAMLUX
  */
-public class ChampionshipManager extends Application {
+public class MainViewController extends Application {
 
     @Override
     public void start(Stage primaryStage) {
