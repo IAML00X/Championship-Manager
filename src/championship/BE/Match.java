@@ -5,12 +5,15 @@
  */
 package championship.BE;
 
+import java.io.Serializable;
+
 /**
  *
  * @author IAMLUX
  */
-public class Match {
+public class Match implements Serializable{
 
+    private int id;
     private int homeTeamScore;
     private int guestTeamScore;
     private boolean isDraw;
@@ -19,6 +22,14 @@ public class Match {
      * All the getters and setters for the Match class.
      *
      */
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getHomeTeamScore() {
         return homeTeamScore;
     }

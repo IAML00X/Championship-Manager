@@ -5,11 +5,13 @@
  */
 package championship.BE;
 
+import java.io.Serializable;
+
 /**
  *
  * @author IAMLUX
  */
-public class Team {
+public class Team implements Serializable{
 
     private int id;
     private int points;
