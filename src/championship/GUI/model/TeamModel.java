@@ -5,10 +5,29 @@
  */
 package championship.GUI.model;
 
+import championship.BE.Team;
+import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 /**
  *
  * @author IAMLUX
  */
 public class TeamModel {
+    
+    private ArrayList<Team> teams;
+    private ObservableList<String> teamName;
+    /**
+     * Constructor
+     */
+    private TeamModel(){
+        this.teamName = FXCollections.observableArrayList();
+        teams = new ArrayList<>();
+    }
+    
+    public void addTeam(String name){
+        Team team = new Team(name);
+    }
 
 }
