@@ -19,6 +19,16 @@ public class Team implements Serializable{
     private int goalsScored;
     private int goalsRecieved;
     private int matchesPlayed;
+    
+    /**
+     * Contructor for Team class with the name parameter.
+     * @param name 
+     */
+    
+    public Team(String name)
+    {
+        this.name = name;
+    }
 
     /**
      * All the getters and setters for the Team class.
