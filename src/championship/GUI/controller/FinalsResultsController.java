@@ -11,7 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -20,16 +19,12 @@ import javafx.stage.Stage;
  *
  * @author MissJ
  */
-public class AddTeamViewController implements Initializable {
+public class FinalsResultsController implements Initializable {
 
     @FXML
-    private Button saveButton;
-    @FXML
-    private Button cancelButton;
-    @FXML
-    private TextField teamNameLb;
-    @FXML
     private AnchorPane root;
+    @FXML
+    private Button closeButton;
 
     /**
      * Initializes the controller class.
@@ -40,15 +35,12 @@ public class AddTeamViewController implements Initializable {
     }    
 
     /**
-     * Closes the window when you press the cancel button. 
+     * Closes the window when you press the close button. 
      * @param event 
      */
     @FXML
-    private void cancelButtonAction(ActionEvent event) 
-    {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
+    public void closeButtonAction(ActionEvent event) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
-
-    
 }

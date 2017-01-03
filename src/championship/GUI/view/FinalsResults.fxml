@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<AnchorPane id="AnchorPane" prefHeight="414.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="414.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.FinalsResultsController">
    <children>
       <TableView editable="true" layoutX="14.0" layoutY="14.0" prefHeight="342.0" prefWidth="378.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
         <columns>
@@ -17,7 +17,7 @@
             <TableColumn prefWidth="75.0" text="Match nr." />
         </columns>
       </TableView>
-      <Button layoutX="276.0" layoutY="369.0" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <Button fx:id="closeButton" layoutX="276.0" layoutY="369.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.6097560975609756">
                <stops>

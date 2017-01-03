@@ -7,16 +7,18 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.MatchSchedulingViewController">
    <children>
-      <TableView layoutX="14.0" layoutY="14.0" prefHeight="425.0" prefWidth="277.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <TableView layoutX="14.0" layoutY="14.0" prefHeight="514.0" prefWidth="664.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
         <columns>
-          <TableColumn prefWidth="134.0" text="Home" />
-          <TableColumn prefWidth="142.0" text="Guest" />
-            <TableColumn prefWidth="75.0" text="Match nr." />
+          <TableColumn prefWidth="263.0" text="Teams " />
+          <TableColumn prefWidth="105.0" text="Groups " />
+            <TableColumn prefWidth="107.0" text="Home " />
+            <TableColumn prefWidth="101.0" text="Guest" />
+            <TableColumn prefWidth="87.0" text="Match nr." />
         </columns>
       </TableView>
-      <Button layoutX="224.0" layoutY="449.0" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <Button fx:id="closeButton" layoutX="224.0" layoutY="449.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
                <stops>

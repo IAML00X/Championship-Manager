@@ -21,7 +21,7 @@
                </stops>
             </RadialGradient>
          </textFill></Button>
-      <Button fx:id="cancelButton" layoutX="282.0" layoutY="101.0" mnemonicParsing="false" text="Cancel">
+      <Button fx:id="cancelButton" layoutX="282.0" layoutY="101.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.44660194174757284" radius="0.6097560975609756">
                <stops>

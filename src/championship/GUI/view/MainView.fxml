@@ -79,7 +79,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Button fx:id="viewMatchesButton" layoutX="228.0" layoutY="165.0" mnemonicParsing="false" text="View Matches ">
+      <Button fx:id="viewMatchesButton" layoutX="226.0" layoutY="141.0" mnemonicParsing="false" onAction="#matchSchedulingButton" prefHeight="51.0" prefWidth="197.0" text="View Matches ">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -92,7 +92,7 @@
             </RadialGradient>
          </textFill>
       </Button>
-      <Button fx:id="finalResultsButton" layoutX="227.0" layoutY="416.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="195.0" text="Final Results">
+      <Button fx:id="finalResultsButton" layoutX="227.0" layoutY="442.0" mnemonicParsing="false" onAction="#buttonActionFinalResults" prefHeight="51.0" prefWidth="195.0" text="Finals Result">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.46116504854368934" focusDistance="0.09756097560975618" radius="0.6463414634146342">
                <stops>
@@ -105,7 +105,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="groupResultsButton" layoutX="227.0" layoutY="251.0" mnemonicParsing="false" text="Group Results ">
+      <Button fx:id="groupResultsButton" layoutX="227.0" layoutY="293.0" mnemonicParsing="false" onAction="#buttonActionGroupResults" text="Group Results ">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.46116504854368934" focusDistance="0.09756097560975618" radius="0.6463414634146342">
                <stops>
@@ -118,7 +118,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="addMatchResultButton" layoutX="170.0" layoutY="531.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="311.0" text="Add Match Result ">
+      <Button fx:id="addMatchResultButton" layoutX="170.0" layoutY="531.0" mnemonicParsing="false" onAction="#matchResultButtonAction" prefHeight="51.0" prefWidth="311.0" text="Add Match Result ">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.46116504854368934" focusDistance="0.09756097560975618" radius="0.6463414634146342">
                <stops>
@@ -131,7 +131,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="teamResultsButton" layoutX="227.0" layoutY="333.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="195.0" text="Team Results ">
+      <Button fx:id="teamResultsButton" layoutX="227.0" layoutY="367.0" mnemonicParsing="false" onAction="#teamRltsButtonAction" prefHeight="51.0" prefWidth="195.0" text="Team Results ">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -149,22 +149,40 @@
             <Image url="@fodbold.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="145.0" layoutY="166.0">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="158.0" layoutY="217.0">
          <image>
             <Image url="@fodbold.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="145.0" layoutY="252.0">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="158.0" layoutY="294.0">
          <image>
             <Image url="@fodbold.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="145.0" layoutY="334.0">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="158.0" layoutY="368.0">
          <image>
             <Image url="@fodbold.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="145.0" layoutY="417.0">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="158.0" layoutY="443.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="viewGroupButton" layoutX="226.0" layoutY="216.0" mnemonicParsing="false" onAction="#viewGoupButtonAction" prefHeight="51.0" prefWidth="197.0" text="View Group ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.46116504854368934" focusDistance="0.09756097560975618" radius="0.6463414634146342">
+               <stops>
+                  <Stop color="#1057f2" />
+                  <Stop color="#121822" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="158.0" layoutY="142.0">
          <image>
             <Image url="@fodbold.png" />
          </image>
