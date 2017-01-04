@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -24,6 +25,12 @@ public class ResultInputViewController implements Initializable {
     private Button cancelButton;
     @FXML
     private Button saveButton;
+    @FXML
+    private TextField matchNrTextField;
+    @FXML
+    private TextField homeTeamGoalTextField;
+    @FXML
+    private TextField guestTeamGoalTextField;
 
     /**
      * Initializes the controller class.
@@ -49,7 +56,7 @@ public class ResultInputViewController implements Initializable {
      * @param event 
      */
     @FXML
-    private void saveButtonAction(ActionEvent event) 
+    private void recordMatch(ActionEvent event) 
     {
         // saves the data the user writes 
     }
