@@ -19,6 +19,14 @@ public class Match implements Serializable{
     private boolean isDraw;
 
     /**
+     * constructor for the Match class with the id parameter
+     * @param id 
+     */
+    public Match(int id){
+        this.id = id;
+    }
+    
+    /**
      * All the getters and setters for the Match class.
      *
      */
