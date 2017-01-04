@@ -52,7 +52,7 @@ public class TeamManager {
     
     /**
      * logic part of the deserialize function, calls it from the DAL when it, itself is called from the GUI
-     * gets everyteam currently serialized
+     * gets every team currently serialized
      * @return team
      * @throws IOException
      * @throws FileNotFoundException

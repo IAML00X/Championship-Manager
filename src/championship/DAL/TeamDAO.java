@@ -30,7 +30,7 @@ public class TeamDAO {
      * @throws IOException
      */
     public void Serialize(Team team) throws FileNotFoundException, IOException {
-        try (FileOutputStream fos = new FileOutputStream("src/TeamFolder/" + team.getName())) {
+        try (FileOutputStream fos = new FileOutputStream("src/championship/TeamFolder/" + team.getName())) {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(team);
         }
