@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="root" prefHeight="148.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.AddTeamViewController">
    <children>
-      <Button fx:id="saveButton" layoutX="212.0" layoutY="101.0" mnemonicParsing="false" text="OK">
+      <Button fx:id="saveButton" layoutX="187.0" layoutY="101.0" mnemonicParsing="false" onAction="#addTeam" text="Add Team">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.44660194174757284" radius="0.6097560975609756">
                <stops>
@@ -30,7 +30,7 @@
                </stops>
             </RadialGradient>
          </textFill></Button>
-      <TextField fx:id="teamNameLb" layoutX="159.0" layoutY="30.0" />
+      <TextField fx:id="teamNameLb" layoutX="159.0" layoutY="30.0" prefHeight="25.0" prefWidth="176.0" />
       <Label layoutX="27.0" layoutY="32.0" text="Team Name">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.44660194174757284" radius="0.6097560975609756">

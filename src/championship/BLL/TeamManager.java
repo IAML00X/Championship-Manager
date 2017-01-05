@@ -33,11 +33,13 @@ public class TeamManager {
     
     /**
      * logic part of the deserialize function, calls it from the DAL when it, itself is called from the GUI
+     * gets a singular team
      * @param name
      * @return team
      * @throws IOException
      * @throws FileNotFoundException
      * @throws ClassNotFoundException 
+     */
     public Team GetTeam(String name) throws IOException, FileNotFoundException, ClassNotFoundException {
         List<Team> teamList = tDAO.deserialize();
         for (Team team : teamList) {
@@ -47,6 +49,10 @@ public class TeamManager {
         }
         return null;
     }
+    
+    /**
+     * logic part of the deserialize function, calls it from the DAL when it, itself is called from the GUI
+     * gets every team currently serialized
      * @return team
      * @throws IOException
      * @throws FileNotFoundException

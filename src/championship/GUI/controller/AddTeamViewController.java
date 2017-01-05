@@ -5,6 +5,8 @@
  */
 package championship.GUI.controller;
 
+import championship.BLL.TeamManager;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -31,24 +33,46 @@ public class AddTeamViewController implements Initializable {
     @FXML
     private AnchorPane root;
 
+    private TeamManager TeamManager;
+
+    public AddTeamViewController() {
+        TeamManager = new TeamManager();
+    }
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
+    }
+    
     /**
-     * Closes the window when you press the cancel button. 
-     * @param event 
+     * when the Add Team button is pressed, the method checks if there is anything in the text field, and if there is,
+     * it calls the AddTeam from the TeamManager so that the team gets serialized
+     * after that it closes the addTeamView
+     * @param event
+     * @throws IOException 
      */
     @FXML
-    private void cancelButtonAction(ActionEvent event) 
-    {
+    private void addTeam(ActionEvent event) throws IOException {
+        if (!teamNameLb.getText().isEmpty()) {
+            String name = teamNameLb.getText();
+            TeamManager.AddTeam(name);
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            stage.close();
+        }
+    }
+
+    /**
+     * Closes the window when you press the cancel button.
+     *
+     * @param event
+     */
+    @FXML
+    private void cancelButtonAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
-    
 }
