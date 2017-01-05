@@ -36,7 +36,7 @@ public class TeamModel {
     }
     /**
      * Returns a list of teamnames.
-     * @return 
+     * @return teamName.
      */
     public ObservableList<String> getTeamNames()
     {
