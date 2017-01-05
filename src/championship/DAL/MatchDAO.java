@@ -30,7 +30,7 @@ public class MatchDAO {
      * @throws IOException
      */
     public void Serialize(Match match) throws FileNotFoundException, IOException {
-        try (FileOutputStream fos = new FileOutputStream("src/MatchFolder/" + match.getId())) {
+        try (FileOutputStream fos = new FileOutputStream("src/championship/MatchFolder/" + match.getId())) {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(match);
         }

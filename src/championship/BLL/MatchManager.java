@@ -25,8 +25,8 @@ public class MatchManager {
      * @return match
      * @throws IOException 
      */
-    public Match AddMatch(int id) throws IOException {
-        Match match = new Match(id);
+    public Match AddMatch(int id, int homeTeamScore, int guestTeamScore) throws IOException {
+        Match match = new Match(id, homeTeamScore, guestTeamScore);
         mDAO.Serialize(match);
         return match;
     }

@@ -22,8 +22,10 @@ public class Match implements Serializable{
      * constructor for the Match class with the id parameter
      * @param id 
      */
-    public Match(int id){
+    public Match(int id, int homeTeamScore, int guestTeamScore){
         this.id = id;
+        this.homeTeamScore = homeTeamScore;
+        this.guestTeamScore = guestTeamScore;
     }
     
     /**
