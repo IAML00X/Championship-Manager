@@ -11,13 +11,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -62,33 +59,5 @@ public class TeamDAO {
             }
         }
         return teamList;
-    }
-
-    public List<Team> read(String teamName) {
-        try {
-            InputStream in = new FileInputStream(teamName);
-            ObjectInputStream ois = new ObjectInputStream(in);
-            List<Team> list = (List<Team>) ois.readObject();
-
-            return list;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        }
-    }
-
-    public void writeObjectData(List<Team> items, String file) {
-  try (ObjectOutputStream oos = new ObjectOutputStream(
-                new FileOutputStream(file))) {
-            oos.writeObject(new ArrayList<Team>(items));
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TeamDAO.class.getName()).log(Level.SEVERE, null, ex);
-
-        } catch (IOException ex) {
-            Logger.getLogger(TeamDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 }
