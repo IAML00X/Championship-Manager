@@ -15,7 +15,7 @@ public class Team implements Serializable{
 
     private int id;
     private int points;
-    private String name;
+    private String teamName;
     private int goalsScored;
     private int goalsRecieved;
     private int matchesPlayed;
@@ -27,7 +27,7 @@ public class Team implements Serializable{
     
     public Team(String name)
     {
-        this.name = name;
+        this.teamName = name;
     }
 
     /**
@@ -51,11 +51,11 @@ public class Team implements Serializable{
     }
 
     public String getName() {
-        return name;
+        return teamName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.teamName = name;
     }
 
     public int getGoalsScored() {

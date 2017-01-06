@@ -16,7 +16,7 @@ public class Match implements Serializable{
     private int id;
     private int homeTeamScore;
     private int guestTeamScore;
-    private boolean isDraw;
+    private boolean wasPlayed;
 
     /**
      * constructor for the Match class with the id parameter
@@ -56,7 +56,7 @@ public class Match implements Serializable{
         this.guestTeamScore = guestTeamScore;
     }
 
-    public boolean isIsDraw() {
-        return isDraw;
+    public boolean wasPlayed() {
+        return wasPlayed;
     }
 }
