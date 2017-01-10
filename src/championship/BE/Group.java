@@ -5,12 +5,40 @@
  */
 package championship.BE;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author IAMLUX
  */
 public class Group {
 
-    private String id;
+    private final String groupName;
 
+    private ArrayList<Team> groupTeams;
+
+    private ArrayList<Match> groupMatches;
+
+    /**
+     * Construct a group for the matchups
+     *
+     * @param groupName
+     * @param groupTeams
+     */
+    public Group(String groupName, ArrayList<Team> groupTeams) {
+        this.groupName = groupName;
+        this.groupTeams = groupTeams;
+        groupMatches = new ArrayList<>();
+    }
+    public String getGroupName() {
+        return groupName;
+    }
+    
+    public ArrayList<Team> getGroupTeams() {
+        return groupTeams;
+    }
+    
+    public ArrayList<Match> getGroupMatches() {
+        return groupMatches;
+    }
 }
