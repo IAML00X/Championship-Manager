@@ -40,6 +40,7 @@ public class AddTeamViewController implements Initializable {
 
     public AddTeamViewController() {
         teammanager = new TeamManager();
+        teammodel = new TeamModel();
     }
 
     /**
