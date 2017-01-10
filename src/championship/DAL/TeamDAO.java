@@ -26,7 +26,7 @@ public class TeamDAO {
 
     public List<Team> readObjData(String saveser) {
         try {
-            InputStream in = new FileInputStream(saveser);
+            InputStream in = new FileInputStream("src/savefolder/" + saveser);
             ObjectInputStream ois = new ObjectInputStream(in);
             List<Team> list = (List<Team>) ois.readObject();
 
@@ -44,7 +44,7 @@ public class TeamDAO {
     public void writeObjData(List<Team> items, String saveser) {
         // write object to file
         try (ObjectOutputStream oos = new ObjectOutputStream(
-                new FileOutputStream(saveser))) {
+                new FileOutputStream("src/savefolder/" + saveser))) {
             oos.writeObject(new ArrayList<Team>(items));
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TeamDAO.class.getName()).log(Level.SEVERE, null, ex);
