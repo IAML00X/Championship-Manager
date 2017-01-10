@@ -5,17 +5,28 @@
  */
 package championship.BLL;
 
-import championship.BE.Match;
-import championship.DAL.MatchDAO;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.List;
+import java.util.Random;
 
 /**
  *
  * @author IAMLUX
  */
 public class MatchManager {
+    
+    
+        /**
+     * This randomize which group each team gets. ??
+     * @param args 
+     */
+    public static void main(String[]args){
+        Random random = new Random();
+        for (int i = 0; i < 10; i++) {
+            int value = 12 + random.nextInt(3);
+            System.out.println(value);
+    
+        }
+    }
+      
 
 //    MatchDAO mDAO = new MatchDAO();
 //    
