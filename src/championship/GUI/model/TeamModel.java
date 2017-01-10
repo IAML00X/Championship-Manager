@@ -6,8 +6,6 @@
 package championship.GUI.model;
 
 import championship.BE.Team;
-import championship.DAL.TeamDAO;
-import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,16 +16,23 @@ import javafx.collections.ObservableList;
  */
 public class TeamModel {
 
-    private ArrayList<Team> teams;
     private final ObservableList<Team> items;
-    private TeamDAO teamDAO;
+    private static TeamModel instance;
 
     /**
      * Constructor
      */
-    public TeamModel() {
+    private TeamModel() {
         items = FXCollections.observableArrayList();
-        teamDAO = new TeamDAO();
+        items.addAll(items);
+
+    }
+
+    public static TeamModel getInstance() {
+        if (instance == null) {
+            instance = new TeamModel();
+        }
+        return instance;
     }
 
     /**

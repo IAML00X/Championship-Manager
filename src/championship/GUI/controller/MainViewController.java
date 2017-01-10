@@ -68,7 +68,6 @@ public class MainViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        teammodel = new TeamModel();
 
         colGroup.setCellValueFactory(
                 new PropertyValueFactory("group"));
@@ -77,13 +76,14 @@ public class MainViewController implements Initializable {
         colPoints.setCellValueFactory(
                 new PropertyValueFactory("points"));
         setTeams();
-        teammodel.setTeamNames(teams);
-        mainTblVw.setItems(teammodel.getTeams());
 
     }
 
     public void setTeams() {
-        teams = (ObservableList<Team>) teammodel.getTeams();
+        TeamModel tm = TeamModel.getInstance();
+        teams = (ObservableList<Team>) tm.getTeams();
+        tm.setTeamNames(teams);
+        mainTblVw.setItems(tm.getTeams());
     }
 
     /**
