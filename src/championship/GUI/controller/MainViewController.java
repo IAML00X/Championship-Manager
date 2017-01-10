@@ -25,7 +25,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
 /**
  * FXML Controller class
  *
@@ -42,7 +41,7 @@ public class MainViewController implements Initializable {
     @FXML
     private Button viewGroupButton;
     @FXML
-    private TableView<?> mainTblVw;
+    private TableView<Team> mainTblVw;
     @FXML
     private Button viewMatchesButton;
     @FXML
@@ -59,39 +58,42 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, String> colTeam;
     @FXML
     private TableColumn<Team, Integer> colPoints;
-    
+
     private TeamModel teammodel;
-    
+
     ObservableList<Team> teams = FXCollections.observableArrayList();
-    
-    
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) 
-    {
-        
+    public void initialize(URL url, ResourceBundle rb) {
+        teammodel = new TeamModel();
+
         colGroup.setCellValueFactory(
                 new PropertyValueFactory("group"));
         colTeam.setCellValueFactory(
                 new PropertyValueFactory("team"));
         colPoints.setCellValueFactory(
                 new PropertyValueFactory("points"));
-        
-        //mainTblVw.getItems().setAll(mainTblVw);
-   
+        setTeams();
+        teammodel.setTeamNames(teams);
+        mainTblVw.setItems(teammodel.getTeamNames());
+
     }
-    
+
+    public void setTeams() {
+        teams = (ObservableList<Team>) teammodel.getTeamNames();
+    }
+
     /**
-     * Opens the view where the user can add a team. 
+     * Opens the view where the user can add a team.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void handleOnButtonActionAddTeam(ActionEvent event) throws IOException 
-    {
+    public void handleOnButtonActionAddTeam(ActionEvent event) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/AddTeamView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
@@ -100,15 +102,15 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
+
     /**
-     * Opens the view where the user can see final results. 
+     * Opens the view where the user can see final results.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void buttonActionFinalResults(ActionEvent event) throws IOException 
-    {
+    public void buttonActionFinalResults(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/FinalsResults.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -116,15 +118,15 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
+
     /**
-     * Opens the view where the user can see the group results. 
+     * Opens the view where the user can see the group results.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void buttonActionGroupResults(ActionEvent event) throws IOException 
-    {
+    public void buttonActionGroupResults(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/GroupResults.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -132,15 +134,16 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
+
     /**
-     * Opens the view where the use can see the scheduling for the teams matches. 
+     * Opens the view where the use can see the scheduling for the teams
+     * matches.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void matchSchedulingButton(ActionEvent event) throws IOException 
-    {
+    public void matchSchedulingButton(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/MatchSchedulingView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -148,16 +151,15 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
-    
+
     /**
-     * Opens the view were the user can enter match results. 
+     * Opens the view were the user can enter match results.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void matchResultButtonAction(ActionEvent event) throws IOException 
-    {
+    public void matchResultButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/ResultInputView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -165,16 +167,15 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
-    
+
     /**
      * Opens the view where the user can see the teams current score.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void teamRltsButtonAction(ActionEvent event) throws IOException 
-    {
+    public void teamRltsButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/TeamScoreView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -182,16 +183,15 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
-    
+
     /**
      * Opens the view where the teams can see what group they belong to.
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
-    public void viewGoupButtonAction(ActionEvent event) throws IOException 
-    {
+    public void viewGoupButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/SingleGroupView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -199,15 +199,14 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
-    
+
     /**
-     * Closes the application. 
-     * @param event 
+     * Closes the application.
+     *
+     * @param event
      */
     @FXML
-    public void closeApp(ActionEvent event)
-    {
+    public void closeApp(ActionEvent event) {
         Platform.exit();
     }
 

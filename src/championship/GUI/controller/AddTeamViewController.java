@@ -46,19 +46,21 @@ public class AddTeamViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
+
     /**
-     * when the Add Team button is pressed, the method checks if there is anything in the text field, and if there is,
-     * it calls the AddTeam from the TeamManager so that the team gets serialized
-     * after that it closes the addTeamView
+     * when the Add Team button is pressed, the method checks if there is
+     * anything in the text field, and if there is, it calls the AddTeam from
+     * the TeamManager so that the team gets serialized after that it closes the
+     * addTeamView
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
     private void addTeam(ActionEvent event) throws IOException {
         if (!teamNameLb.getText().isEmpty()) {
             String name = teamNameLb.getText();
-            TeamManager.AddTeam(name);
+            TeamManager.addTeam(name);
             Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.close();
         }

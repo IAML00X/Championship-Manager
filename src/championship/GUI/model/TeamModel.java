@@ -6,7 +6,9 @@
 package championship.GUI.model;
 
 import championship.BE.Team;
+import championship.DAL.TeamDAO;
 import java.util.ArrayList;
+import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -15,42 +17,43 @@ import javafx.collections.ObservableList;
  * @author IAMLUX
  */
 public class TeamModel {
-    
+
     private ArrayList<Team> teams;
-    private ObservableList<String> teamName;
+    private ObservableList<Team> items;
+    private TeamDAO teamDAO;
+
     /**
      * Constructor
      */
-    private TeamModel(){
-        this.teamName = FXCollections.observableArrayList();
-        teams = new ArrayList<>();
+    public TeamModel() {
+        items = FXCollections.observableArrayList();
+        teamDAO = new TeamDAO();
     }
+
     /**
      * Lets you add a team.
-     * @param name 
+     *
+     * @param name
      */
-    public void addTeam(String name){
-        Team team = new Team(name);
+    public void addTeam(Team team) {
         teams.add(team);
-        setTeamNames();
     }
+
     /**
      * Returns a list of teamnames.
+     *
      * @return teamName.
      */
-    public ObservableList<String> getTeamNames()
-    {
-        return teamName;
+    public ObservableList<Team> getTeamNames() {
+        return items;
     }
+
     /**
      * Sets the name of the Team, loop for forced update.
      */
-    private void setTeamNames() {
-        teamName.clear();
-        for (Team team : teams)
-        {
-            teamName.add(team.getName());
-        }
+    public void setTeamNames(List<Team> teams) {
+        items.clear();
+        items.addAll(teams);
     }
 
 }

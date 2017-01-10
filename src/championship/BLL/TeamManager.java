@@ -7,9 +7,7 @@ package championship.BLL;
 
 import championship.BE.Team;
 import championship.DAL.TeamDAO;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
 
 /**
  *
@@ -25,11 +23,12 @@ public class TeamManager {
 //     * @return team
 //     * @throws IOException 
 //     */
-//    public Team AddTeam(String name) throws IOException {
-//        Team team = new Team(name);
+
+    public Team addTeam(String name) throws IOException {
+        Team team = new Team(name);
 //        tDAO.Serialize(team);
-//        return team;
-//    }
+        return team;
+    }
 //    
 //    /**
 //     * logic part of the deserialize function, calls it from the DAL when it, itself is called from the GUI
