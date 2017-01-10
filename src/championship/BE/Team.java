@@ -11,23 +11,25 @@ import java.io.Serializable;
  *
  * @author IAMLUX
  */
-public class Team implements Serializable{
+public class Team implements Serializable {
 
     private int id;
     private int points;
     private String name;
+    private String group;
     private int goalsScored;
     private int goalsRecieved;
     private int matchesPlayed;
-    
+
     /**
      * Contructor for Team class with the name parameter.
-     * @param name 
+     *
+     * @param name
      */
-    
-    public Team(String name)
-    {
+    public Team(String name, String group, int points) {
         this.name = name;
+        this.group = group;
+        this.points = points;
     }
 
     /**

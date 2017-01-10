@@ -8,6 +8,7 @@ package championship.BLL;
 import championship.BE.Team;
 import championship.DAL.TeamDAO;
 import java.io.IOException;
+import java.util.List;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.io.IOException;
  */
 public class TeamManager {
 
-    TeamDAO tDAO = new TeamDAO();
+    TeamDAO teamData = new TeamDAO();
 //    
 //    /**
 //     * logic part of the serialize function, calls it from the DAL when it, itself is called from the GUI
@@ -24,10 +25,18 @@ public class TeamManager {
 //     * @throws IOException 
 //     */
 
-    public Team addTeam(String name) throws IOException {
-        Team team = new Team(name);
+    public Team Team(String name, String group, int points) throws IOException {
+        Team team = new Team(name, group, points);
 //        tDAO.Serialize(team);
         return team;
+    }
+
+    public List<Team> getAll() {
+        return teamData.readObjData("save.ser");
+    }
+
+    public void writeTeams(List<Team> teams) {
+        teamData.writeObjData(teams, "save.ser");
     }
 //    
 //    /**

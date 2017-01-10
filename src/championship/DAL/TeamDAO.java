@@ -6,21 +6,53 @@
 package championship.DAL;
 
 import championship.BE.Team;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author IAMLUX
  */
 public class TeamDAO {
+
+    public List<Team> readObjData(String saveser) {
+        try {
+            InputStream in = new FileInputStream(saveser);
+            ObjectInputStream ois = new ObjectInputStream(in);
+            List<Team> list = (List<Team>) ois.readObject();
+
+            return list;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+
+    }
+
+    public void writeObjData(List<Team> items, String saveser) {
+        // write object to file
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream(saveser))) {
+            oos.writeObject(new ArrayList<Team>(items));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TeamDAO.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (IOException ex) {
+            Logger.getLogger(TeamDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
 //    /**
 //     * writes the data and metadata into a file that is saved in TeamFolder

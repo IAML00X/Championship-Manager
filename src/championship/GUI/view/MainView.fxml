@@ -62,7 +62,7 @@
       <TableView fx:id="mainTblVw" layoutX="556.0" layoutY="23.0" prefHeight="591.0" prefWidth="503.0">
         <columns>
           <TableColumn fx:id="colGroup" prefWidth="138.0" text="Group" />
-            <TableColumn fx:id="colTeam" prefWidth="218.0" text="Team" />
+            <TableColumn fx:id="colName" prefWidth="218.0" text="Team" />
             <TableColumn fx:id="colPoints" prefWidth="146.0" text="Points" />
         </columns>
       </TableView>

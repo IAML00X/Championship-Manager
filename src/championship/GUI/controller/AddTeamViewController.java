@@ -5,7 +5,9 @@
  */
 package championship.GUI.controller;
 
+import championship.BE.Team;
 import championship.BLL.TeamManager;
+import championship.GUI.model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,10 +35,11 @@ public class AddTeamViewController implements Initializable {
     @FXML
     private AnchorPane root;
 
-    private TeamManager TeamManager;
+    private TeamManager teammanager;
+    private TeamModel teammodel;
 
     public AddTeamViewController() {
-        TeamManager = new TeamManager();
+        teammanager = new TeamManager();
     }
 
     /**
@@ -57,13 +60,12 @@ public class AddTeamViewController implements Initializable {
      * @throws IOException
      */
     @FXML
-    private void addTeam(ActionEvent event) throws IOException {
-        if (!teamNameLb.getText().isEmpty()) {
-            String name = teamNameLb.getText();
-            TeamManager.addTeam(name);
-            Stage stage = (Stage) cancelButton.getScene().getWindow();
-            stage.close();
-        }
+    public void addTeam(ActionEvent event) throws IOException {
+        Team team = new Team(teamNameLb.getText(), "", 0);
+        teammodel.addTeam(team);
+        teammanager.writeTeams(teammodel.getTeams());
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 
     /**

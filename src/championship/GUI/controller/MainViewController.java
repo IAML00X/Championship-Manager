@@ -55,7 +55,7 @@ public class MainViewController implements Initializable {
     @FXML
     private TableColumn<Team, String> colGroup;
     @FXML
-    private TableColumn<Team, String> colTeam;
+    private TableColumn<Team, String> colName;
     @FXML
     private TableColumn<Team, Integer> colPoints;
 
@@ -72,18 +72,18 @@ public class MainViewController implements Initializable {
 
         colGroup.setCellValueFactory(
                 new PropertyValueFactory("group"));
-        colTeam.setCellValueFactory(
-                new PropertyValueFactory("team"));
+        colName.setCellValueFactory(
+                new PropertyValueFactory("name"));
         colPoints.setCellValueFactory(
                 new PropertyValueFactory("points"));
         setTeams();
         teammodel.setTeamNames(teams);
-        mainTblVw.setItems(teammodel.getTeamNames());
+        mainTblVw.setItems(teammodel.getTeams());
 
     }
 
     public void setTeams() {
-        teams = (ObservableList<Team>) teammodel.getTeamNames();
+        teams = (ObservableList<Team>) teammodel.getTeams();
     }
 
     /**

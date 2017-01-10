@@ -19,7 +19,7 @@ import javafx.collections.ObservableList;
 public class TeamModel {
 
     private ArrayList<Team> teams;
-    private ObservableList<Team> items;
+    private final ObservableList<Team> items;
     private TeamDAO teamDAO;
 
     /**
@@ -36,7 +36,7 @@ public class TeamModel {
      * @param name
      */
     public void addTeam(Team team) {
-        teams.add(team);
+        items.add(team);
     }
 
     /**
@@ -44,7 +44,7 @@ public class TeamModel {
      *
      * @return teamName.
      */
-    public ObservableList<Team> getTeamNames() {
+    public ObservableList<Team> getTeams() {
         return items;
     }
 
