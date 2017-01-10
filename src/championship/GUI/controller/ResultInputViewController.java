@@ -49,17 +49,17 @@ public class ResultInputViewController implements Initializable {
         // TODO
     }
 
-//    /**
-//     * Closes the window when you press the cancel button.
-//     *
-//     * @param event
-//     */
-//    @FXML
-//    public void cancelButtonAction(ActionEvent event) {
-//        Stage stage = (Stage) cancelButton.getScene().getWindow();
-//        stage.close();
-//    }
-//
+    /**
+     * Closes the window when you press the cancel button.
+     *
+     * @param event
+     */
+    @FXML
+    public void cancelButtonAction(ActionEvent event) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
+    }
+
 //    /**
 //     * checks if all three fields contain text/numbers, then converts Strings to int
 //     * after that it calls the serialize method through the BLL, and places the file in the given folder

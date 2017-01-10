@@ -62,12 +62,14 @@ public class AddTeamViewController implements Initializable {
      */
     @FXML
     public void addTeam(ActionEvent event) throws IOException {
-        TeamModel tm = TeamModel.getInstance();
-        Team team = new Team(teamNameLb.getText(), "", 0);
-        tm.addTeam(team);
-        teammanager.writeTeams(tm.getTeams());
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        if (!teamNameLb.getText().isEmpty()) {
+            TeamModel tm = TeamModel.getInstance();
+            Team team = new Team(teamNameLb.getText(), "", 0);
+            tm.addTeam(team);
+            teammanager.writeTeams(tm.getTeams());
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            stage.close();
+        }
     }
 
     /**
