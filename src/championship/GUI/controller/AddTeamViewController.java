@@ -6,7 +6,6 @@
 package championship.GUI.controller;
 
 import championship.BE.Team;
-import championship.BLL.TeamManager;
 import championship.GUI.model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
@@ -35,11 +34,9 @@ public class AddTeamViewController implements Initializable {
     @FXML
     private AnchorPane root;
 
-    private TeamManager teammanager;
     private TeamModel teammodel;
 
     public AddTeamViewController() {
-        teammanager = new TeamManager();
 
     }
 
@@ -54,7 +51,7 @@ public class AddTeamViewController implements Initializable {
     /**
      * when the Add Team button is pressed, the method checks if there is
      * anything in the text field, and if there is, it calls the AddTeam from
-     * the TeamManager so that the team gets serialized after that it closes the
+     * the TeamModel so that the team gets serialized after that it closes the
      * addTeamView
      *
      * @param event
@@ -66,7 +63,7 @@ public class AddTeamViewController implements Initializable {
             TeamModel tm = TeamModel.getInstance();
             Team team = new Team(teamNameLb.getText(), 0, 0, 0, 0, 0, 0, 0);
             tm.addTeam(team);
-            teammanager.writeTeams(tm.getTeams());
+            tm.getTeams();
             Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.close();
         }

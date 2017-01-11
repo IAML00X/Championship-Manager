@@ -6,6 +6,7 @@
 package championship.GUI.model;
 
 import championship.BE.Team;
+import championship.BLL.TeamManager;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
@@ -27,10 +28,12 @@ public class TeamModel {
 
     private ArrayList<Team> finalTeams;
 
+    private TeamManager teammanager;
     /**
      * Constructor
      */
     private TeamModel() {
+        teammanager = new TeamManager();
         items = FXCollections.observableArrayList();
         items.addAll(items);
 
@@ -58,6 +61,7 @@ public class TeamModel {
      * @return teamName.
      */
     public ObservableList<Team> getTeams() {
+        teammanager.writeTeams(items);
         return items;
     }
 

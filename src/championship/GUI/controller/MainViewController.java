@@ -6,7 +6,6 @@
 package championship.GUI.controller;
 
 import championship.BE.Team;
-import championship.BLL.TeamManager;
 import championship.GUI.model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
@@ -65,9 +64,7 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, Integer> colMtchPl;
     @FXML
     private TableColumn<Team, Integer> colGlScrd;
-
-    TeamManager teamManager = new TeamManager();
-        
+    
     ObservableList<Team> teams = FXCollections.observableArrayList();
     
     /**
