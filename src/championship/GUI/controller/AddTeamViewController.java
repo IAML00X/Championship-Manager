@@ -78,7 +78,7 @@ public class AddTeamViewController implements Initializable {
      * @param event
      */
     @FXML
-    private void cancelButtonAction(ActionEvent event) {
+    public void cancelButtonAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }

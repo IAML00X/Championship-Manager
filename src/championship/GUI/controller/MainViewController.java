@@ -6,6 +6,7 @@
 package championship.GUI.controller;
 
 import championship.BE.Team;
+import championship.BLL.TeamManager;
 import championship.GUI.model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
@@ -60,7 +61,11 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, Integer> colPoints;
 
     private TeamModel teammodel;
+    
+    private Team selectedTeam;
 
+    TeamManager teamManager = new TeamManager();
+        
     ObservableList<Team> teams = FXCollections.observableArrayList();
 
     /**
@@ -193,6 +198,22 @@ public class MainViewController implements Initializable {
     @FXML
     public void viewGoupButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/SingleGroupView.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+    
+    /**
+     * Opens the view where the user can edit a team name. 
+     *
+     * @param event
+     * @throws IOException
+     */
+    @FXML
+    public void updateButtonAction(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/UpdateView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("");

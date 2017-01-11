@@ -6,6 +6,7 @@
 package championship.GUI.model;
 
 import championship.BE.Team;
+import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +18,14 @@ import javafx.collections.ObservableList;
 public class TeamModel {
 
     private final ObservableList<Team> items;
+    
     private static TeamModel instance;
+    
+    private ArrayList<Team> quarterFinalTeams;
+
+    private ArrayList<Team> semiFinalTeams;
+
+    private ArrayList<Team> finalTeams;
 
     /**
      * Constructor
