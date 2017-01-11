@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="783.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.SingleGroupViewController">
+   <children>
+      <TableView editable="true" layoutX="14.0" layoutY="50.0" prefHeight="318.0" prefWidth="604.0">
+        <columns>
+          <TableColumn fx:id="teamA" prefWidth="234.0" text="Team" />
+            <TableColumn fx:id="wonA" prefWidth="92.0" text="Won" />
+            <TableColumn fx:id="drawA" prefWidth="92.0" text="Draw" />
+            <TableColumn fx:id="lostA" prefWidth="92.0" text="Lost" />
+            <TableColumn fx:id="pointsA" prefWidth="92.0" text="Points" />
+        </columns>
+      </TableView>
+      <Button fx:id="closeButton" layoutX="1189.0" layoutY="742.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="31.0" prefWidth="57.0" text="Close">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5853658536585366">
+               <stops>
+                  <Stop color="#2119ab" />
+                  <Stop color="#252323" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <TableView editable="true" layoutX="14.0" layoutY="418.0" prefHeight="318.0" prefWidth="604.0">
+         <columns>
+            <TableColumn fx:id="teamB" prefWidth="234.0" text="Team" />
+            <TableColumn fx:id="wonB" prefWidth="92.0" text="Won" />
+            <TableColumn fx:id="drawB" prefWidth="92.0" text="Draw" />
+            <TableColumn fx:id="lostB" prefWidth="92.0" text="Lost" />
+            <TableColumn fx:id="pointsB" prefWidth="92.0" text="Points" />
+         </columns>
+      </TableView>
+      <TableView editable="true" layoutX="642.0" layoutY="50.0" prefHeight="318.0" prefWidth="604.0">
+         <columns>
+            <TableColumn fx:id="teamC" prefWidth="234.0" text="Team" />
+            <TableColumn fx:id="wonC" prefWidth="92.0" text="Won" />
+            <TableColumn fx:id="drawC" prefWidth="92.0" text="Draw" />
+            <TableColumn fx:id="lostC" prefWidth="92.0" text="Lost" />
+            <TableColumn fx:id="pointsC" prefWidth="92.0" text="Points" />
+         </columns>
+      </TableView>
+      <TableView editable="true" layoutX="642.0" layoutY="414.0" prefHeight="318.0" prefWidth="604.0">
+         <columns>
+            <TableColumn fx:id="teamD" prefWidth="234.0" text="Team" />
+            <TableColumn fx:id="wonD" prefWidth="92.0" text="Won" />
+            <TableColumn fx:id="drawD" prefWidth="92.0" text="Draw" />
+            <TableColumn fx:id="lostD" prefWidth="92.0" text="Lost" />
+            <TableColumn fx:id="pointsD" prefWidth="92.0" text="Points" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="7.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="642.0" layoutY="368.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="642.0" layoutY="7.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="371.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="22.0" text="Group A">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7038834951456311">
+               <stops>
+                  <Stop color="#1a13ae" />
+                  <Stop color="#282727" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="382.0" text="Group D">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7038834951456311">
+               <stops>
+                  <Stop color="#1a13ae" />
+                  <Stop color="#282727" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="382.0" text="Group B">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7038834951456311">
+               <stops>
+                  <Stop color="#1a13ae" />
+                  <Stop color="#282727" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="22.0" text="Group C">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7038834951456311">
+               <stops>
+                  <Stop color="#1a13ae" />
+                  <Stop color="#282727" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

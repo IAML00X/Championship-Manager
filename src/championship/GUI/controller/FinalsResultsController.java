@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -25,6 +26,22 @@ public class FinalsResultsController implements Initializable {
     private AnchorPane root;
     @FXML
     private Button closeButton;
+    @FXML
+    private TableColumn<?, ?> homePlrCol;
+    @FXML
+    private TableColumn<?, ?> guestPlrCol;
+    @FXML
+    private TableColumn<?, ?> gameRstsCol;
+    @FXML
+    private TableColumn<?, ?> groupCol;
+    @FXML
+    private TableColumn<?, ?> teamCol;
+    @FXML
+    private TableColumn<?, ?> quarterFnlsCol;
+    @FXML
+    private TableColumn<?, ?> semiFnlsCol;
+    @FXML
+    private TableColumn<?, ?> finalsCol;
 
     /**
      * Initializes the controller class.

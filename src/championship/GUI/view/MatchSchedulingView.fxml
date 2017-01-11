@@ -11,11 +11,11 @@
    <children>
       <TableView layoutX="14.0" layoutY="14.0" prefHeight="514.0" prefWidth="664.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
         <columns>
-          <TableColumn prefWidth="263.0" text="Teams " />
-          <TableColumn prefWidth="105.0" text="Groups " />
-            <TableColumn prefWidth="107.0" text="Home " />
-            <TableColumn prefWidth="101.0" text="Guest" />
-            <TableColumn prefWidth="87.0" text="Match nr." />
+          <TableColumn fx:id="teamsCol" prefWidth="263.0" text="Teams " />
+          <TableColumn fx:id="groupsCol" prefWidth="105.0" text="Groups " />
+            <TableColumn fx:id="homeCol" prefWidth="107.0" text="Home " />
+            <TableColumn fx:id="guestCol" prefWidth="101.0" text="Guest" />
+            <TableColumn fx:id="macthNrCol" prefWidth="87.0" text="Match nr." />
         </columns>
       </TableView>
       <Button fx:id="closeButton" layoutX="224.0" layoutY="449.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">

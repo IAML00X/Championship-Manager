@@ -124,21 +124,6 @@ public class MainViewController implements Initializable {
         stage.show();
     }
 
-    /**
-     * Opens the view where the user can see the group results.
-     *
-     * @param event
-     * @throws IOException
-     */
-    @FXML
-    public void buttonActionGroupResults(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/GroupResults.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Group Results");
-        stage.setScene(new Scene(root1));
-        stage.show();
-    }
 
     /**
      * Opens the view where the use can see the scheduling for the teams
@@ -197,7 +182,7 @@ public class MainViewController implements Initializable {
      */
     @FXML
     public void viewGoupButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/SingleGroupView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/GroupView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("");

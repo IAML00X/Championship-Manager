@@ -17,7 +17,7 @@ public class Group {
 
     private ArrayList<Team> groupTeams;
 
-    private ArrayList<Match> groupMatches;
+   
     
     private int teamsInGroup;
     private int[] homeTeams1;
@@ -38,7 +38,7 @@ public class Group {
     public Group(String groupName, ArrayList<Team> groupTeams) {
         this.groupName = groupName;
         this.groupTeams = groupTeams;
-        groupMatches = new ArrayList<>();
+
     }
     public String getGroupName() {
         return groupName;
@@ -47,10 +47,7 @@ public class Group {
     public ArrayList<Team> getGroupTeams() {
         return groupTeams;
     }
-    
-    public ArrayList<Match> getGroupMatches() {
-        return groupMatches;
-    }
+
 
     public int getTeamsInGroup() {
         return teamsInGroup;

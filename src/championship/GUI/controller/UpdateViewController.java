@@ -10,12 +10,10 @@ import championship.BLL.TeamManager;
 import championship.GUI.model.TeamModel;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -41,22 +39,18 @@ public class UpdateViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
     
-//    @FXML
-//    public void saveTeam(ActionEvent event)
-//    {
-//    
-//        TeamModel tm = TeamModel.getInstance();
-//   //     Team team = new Team(teamNmTxt.setText(tm.getTeams(), "", 0);
-//        tm.addTeam(team);
-//        teammanager.writeTeams(tm.getTeams());
-//        Stage stage = (Stage) closeBtn.getScene().getWindow();
-//        stage.close();
-//       
-//
-//    }
+    //public void Update
+    
+   // @FXML
+  //  public void saveTeam(ActionEvent event)
+    //{
+    
+
+
+   // }
     
 //    public void getTeamInfo(Team selectedTeam)
 //    {
@@ -77,11 +71,11 @@ public class UpdateViewController implements Initializable {
      *
      * @param event
      */
-    public void cancelButton(ActionEvent event)
-    {
-        Stage stage = (Stage) closeBtn.getScene().getWindow();
-        stage.close();
-    }
+//    public void cancelButton(ActionEvent event)
+//    {
+//        Stage stage = (Stage) closeBtn.getScene().getWindow();
+//        stage.close();
+//    }
 
 
     
