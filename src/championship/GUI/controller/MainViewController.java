@@ -46,19 +46,25 @@ public class MainViewController implements Initializable {
     @FXML
     private Button viewMatchesButton;
     @FXML
-    private Button finalResultsButton;
-    @FXML
-    private Button groupResultsButton;
-    @FXML
     private Button addMatchResultButton;
-    @FXML
-    private Button teamResultsButton;
     @FXML
     private TableColumn<Team, String> colGroup;
     @FXML
     private TableColumn<Team, String> colName;
     @FXML
     private TableColumn<Team, Integer> colPoints;
+    @FXML
+    private Button finalsBttn;
+    @FXML
+    private TableColumn<Team, Integer> wonCol;
+    @FXML
+    private TableColumn<Team, Integer> lostCol;
+    @FXML
+    private TableColumn<Team, Integer> drawCol;
+    @FXML
+    private TableColumn<Team, Integer> matchesPldCol;
+    @FXML
+    private TableColumn<Team, Integer> goalsScrdCol;
 
     private TeamModel teammodel;
     
@@ -67,6 +73,7 @@ public class MainViewController implements Initializable {
     TeamManager teamManager = new TeamManager();
         
     ObservableList<Team> teams = FXCollections.observableArrayList();
+
 
     /**
      * Initializes the controller class.
@@ -158,21 +165,7 @@ public class MainViewController implements Initializable {
         stage.show();
     }
 
-    /**
-     * Opens the view where the user can see the teams current score.
-     *
-     * @param event
-     * @throws IOException
-     */
-    @FXML
-    public void teamRltsButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/TeamScoreView.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("View The Teams Results");
-        stage.setScene(new Scene(root1));
-        stage.show();
-    }
+
 
     /**
      * Opens the view where the teams can see what group they belong to.

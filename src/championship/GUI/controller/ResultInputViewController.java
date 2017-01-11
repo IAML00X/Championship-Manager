@@ -5,8 +5,6 @@
  */
 package championship.GUI.controller;
 
-import championship.BLL.MatchManager;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -15,7 +13,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.util.converter.IntegerStringConverter;
 
 /**
  * FXML Controller class
@@ -35,10 +32,10 @@ public class ResultInputViewController implements Initializable {
     @FXML
     private TextField guestTeamGoalTextField;
 
-    private MatchManager MatchManager;
+
 
     public ResultInputViewController() {
-        MatchManager = new MatchManager();
+        
     }
 
     /**
