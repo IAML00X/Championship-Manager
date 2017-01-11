@@ -42,11 +42,13 @@ public class MainViewController implements Initializable {
     @FXML
     private Button viewGroupButton;
     @FXML
-    private TableView<Team> mainTblVw;
-    @FXML
     private Button viewMatchesButton;
     @FXML
     private Button addMatchResultButton;
+    @FXML
+    private Button finalsBttn;
+    @FXML
+    private TableView<Team> mainTblVw;
     @FXML
     private TableColumn<Team, String> colGroup;
     @FXML
@@ -54,27 +56,20 @@ public class MainViewController implements Initializable {
     @FXML
     private TableColumn<Team, Integer> colPoints;
     @FXML
-    private Button finalsBttn;
+    private TableColumn<Team, Integer> colWon;
     @FXML
-    private TableColumn<Team, Integer> wonCol;
+    private TableColumn<Team, Integer> colLost;
     @FXML
-    private TableColumn<Team, Integer> lostCol;
+    private TableColumn<Team, Integer> colDraw;
     @FXML
-    private TableColumn<Team, Integer> drawCol;
+    private TableColumn<Team, Integer> colMtchPl;
     @FXML
-    private TableColumn<Team, Integer> matchesPldCol;
-    @FXML
-    private TableColumn<Team, Integer> goalsScrdCol;
-
-    private TeamModel teammodel;
-    
-    private Team selectedTeam;
+    private TableColumn<Team, Integer> colGlScrd;
 
     TeamManager teamManager = new TeamManager();
         
     ObservableList<Team> teams = FXCollections.observableArrayList();
-
-
+    
     /**
      * Initializes the controller class.
      */
@@ -87,6 +82,16 @@ public class MainViewController implements Initializable {
                 new PropertyValueFactory("name"));
         colPoints.setCellValueFactory(
                 new PropertyValueFactory("points"));
+        colWon.setCellValueFactory(
+                new PropertyValueFactory("wins"));
+        colLost.setCellValueFactory(
+                new PropertyValueFactory("losses"));
+        colDraw.setCellValueFactory(
+                new PropertyValueFactory("draws"));
+        colMtchPl.setCellValueFactory(
+                new PropertyValueFactory("matchesPlayed"));
+        colGlScrd.setCellValueFactory(
+                new PropertyValueFactory("goalsScored"));        
         setTeams();
 
     }

@@ -25,8 +25,8 @@ public class TeamManager {
 //     * @throws IOException 
 //     */
 
-    public Team Team(String name, String group, int points) throws IOException {
-        Team team = new Team(name, group, points);
+    public Team Team(String name, int points, int goalsScored, int goalsRecieved, int matchesPlayed, int wins, int draws, int losses) throws IOException {
+        Team team = new Team(name, points, goalsScored, goalsRecieved, matchesPlayed, wins, draws, losses);
 //        tDAO.Serialize(team);
         return team;
     }
