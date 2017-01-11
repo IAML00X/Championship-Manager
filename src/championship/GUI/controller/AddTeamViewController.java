@@ -63,7 +63,6 @@ public class AddTeamViewController implements Initializable {
             TeamModel tm = TeamModel.getInstance();
             Team team = new Team(teamNameLb.getText(), 0, 0, 0, 0, 0, 0, 0);
             tm.addTeam(team);
-            tm.getTeams();
             Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.close();
         }

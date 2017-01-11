@@ -52,6 +52,7 @@ public class TeamModel {
      * @param name
      */
     public void addTeam(Team team) {
+        teammanager.writeTeams(items);
         items.add(team);
     }
 
@@ -61,7 +62,6 @@ public class TeamModel {
      * @return teamName.
      */
     public ObservableList<Team> getTeams() {
-        teammanager.writeTeams(items);
         return items;
     }
 
