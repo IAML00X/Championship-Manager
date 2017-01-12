@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -28,9 +29,11 @@ public class ResultInputViewController implements Initializable {
     @FXML
     private TextField matchNrTextField;
     @FXML
-    private TextField homeTeamGoalTextField;
+    private RadioButton homeTeamWonButton;
     @FXML
-    private TextField guestTeamGoalTextField;
+    private RadioButton drawButton;
+    @FXML
+    private RadioButton awayTeamWonButton;
 
     public ResultInputViewController() {
 
@@ -92,4 +95,16 @@ public class ResultInputViewController implements Initializable {
 //            stage.close();
 //        }
 //    }
+
+    @FXML
+    private void handleHomeTeamWonButton(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleDrawButton(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleAwayTeamWonButton(ActionEvent event) {
+    }
 }
