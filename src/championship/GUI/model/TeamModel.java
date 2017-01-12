@@ -18,7 +18,7 @@ import javafx.collections.ObservableList;
  */
 public class TeamModel {
 
-    private final ObservableList<Team> items;
+    private final ObservableList<Team> teams;
 
     private static TeamModel instance;
 
@@ -28,6 +28,11 @@ public class TeamModel {
 
     private ArrayList<Team> finalTeams;
 
+    private final ObservableList<Team> groupA;
+    private final ObservableList<Team> groupB;
+    private final ObservableList<Team> groupC;
+    private final ObservableList<Team> groupD;
+
     private TeamManager teammanager;
 
     /**
@@ -35,8 +40,12 @@ public class TeamModel {
      */
     private TeamModel() {
         teammanager = new TeamManager();
-        items = FXCollections.observableArrayList();
-        items.addAll(items);
+        teams = FXCollections.observableArrayList();
+        groupA = FXCollections.observableArrayList();
+        groupB = FXCollections.observableArrayList();
+        groupC = FXCollections.observableArrayList();
+        groupD = FXCollections.observableArrayList();
+        teams.addAll(teams);
 
     }
 
@@ -53,8 +62,8 @@ public class TeamModel {
      * @param name
      */
     public void addTeam(Team team) {
-        //teammanager.writeTeams(items);
-        items.add(team);
+        //teammanager.writeTeams(teams);
+        teams.add(team);
     }
 
     /**
@@ -63,15 +72,15 @@ public class TeamModel {
      * @return teamName.
      */
     public ObservableList<Team> getTeams() {
-        return items;
+        return teams;
     }
 
     /**
      * Sets the name of the Team, loop for forced update.
      */
     public void setTeamNames(List<Team> teams) {
-        items.clear();
-        items.addAll(teams);
+        this.teams.clear();
+        this.teams.addAll(teams);
     }
 
     public ArrayList<Team> getQuarterFinalTeams() {
@@ -96,6 +105,22 @@ public class TeamModel {
 
     public void setFinalTeams(ArrayList<Team> finalTeams) {
         this.finalTeams = finalTeams;
+    }
+
+    public ObservableList<Team> getGroupA() {
+        return groupA;
+    }
+
+    public ObservableList<Team> getGroupB() {
+        return groupB;
+    }
+
+    public ObservableList<Team> getGroupC() {
+        return groupC;
+    }
+
+    public ObservableList<Team> getGroupD() {
+        return groupD;
     }
 
 }

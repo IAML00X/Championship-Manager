@@ -31,7 +31,7 @@ import javafx.stage.Stage;
  * @author IAMLUX
  */
 public class MainViewController implements Initializable {
-    
+
     @FXML
     private Button addTeamButton;
     @FXML
@@ -64,7 +64,7 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, Integer> colMtchPl;
     @FXML
     private TableColumn<Team, Integer> colGlScrd;
-    
+
     ObservableList<Team> teams = FXCollections.observableArrayList();
 
     /**
@@ -72,7 +72,7 @@ public class MainViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         colGroup.setCellValueFactory(
                 new PropertyValueFactory("group"));
         colName.setCellValueFactory(
@@ -90,9 +90,27 @@ public class MainViewController implements Initializable {
         colGlScrd.setCellValueFactory(
                 new PropertyValueFactory("goalsScored"));
         setTeams();
-        
+
+        teams.add(new Team("Sædding", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Sønderris", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Tjæreborg", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Bollesager", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Jerne", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Hjerting", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Rørkjær", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Kvaglund", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Sjælborg", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Ribe", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Alslev", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Tarp", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Forvrefeldt", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Spangsbjerg", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Gjesing", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Danmarksgade", 0, 0, 0, 0, 0, 0, 0));
+        teams.add(new Team("Norvang", 0, 0, 0, 0, 0, 0, 0));
+
     }
-    
+
     public void setTeams() {
         TeamModel tm = TeamModel.getInstance();
         teams = (ObservableList<Team>) tm.getTeams();
@@ -108,7 +126,7 @@ public class MainViewController implements Initializable {
      */
     @FXML
     public void handleOnButtonActionAddTeam(ActionEvent event) throws IOException {
-        
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/AddTeamView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -209,5 +227,5 @@ public class MainViewController implements Initializable {
     public void closeApp(ActionEvent event) {
         Platform.exit();
     }
-    
+
 }

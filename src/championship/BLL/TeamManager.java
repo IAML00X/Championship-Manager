@@ -6,7 +6,7 @@
 package championship.BLL;
 
 import championship.BE.Team;
-import championship.DAL.TeamDAO;
+import championship.GUI.model.TeamModel;
 import java.io.IOException;
 
 /**
@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class TeamManager {
 
-    TeamDAO teamData = new TeamDAO();
+//    TeamDAO teamData = new TeamDAO();
 //    
 //    /**
 //     * logic part of the serialize function, calls it from the DAL when it, itself is called from the GUI
@@ -23,11 +23,18 @@ public class TeamManager {
 //     * @return team
 //     * @throws IOException 
 //     */
-
     public Team Team(String name, int points, int goalsScored, int goalsRecieved, int matchesPlayed, int wins, int draws, int losses) throws IOException {
         Team team = new Team(name, points, goalsScored, goalsRecieved, matchesPlayed, wins, draws, losses);
 //        tDAO.Serialize(team);
         return team;
+    }
+
+    public void createGroups() {
+        TeamModel tm = TeamModel.getInstance();
+        for (Team team : tm.getTeams()) {
+            tm.getGroupA().add(team);
+
+        }
     }
 
 //    public List<Team> getAll() {
