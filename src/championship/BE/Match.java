@@ -23,34 +23,42 @@ public class Match {
         this.awayScore = awayScre;
     }
 
+    //
     public Team getHomeTeam() {
         return homeTeam;
     }
 
+    //
     public void setHomeTeam(Team homeTeam) {
         this.homeTeam = homeTeam;
     }
 
+    //
     public Team getAwayTeam() {
         return awayTeam;
     }
 
+    //
     public void setAwayTeam(Team awayTeam) {
         this.awayTeam = awayTeam;
     }
 
+    //
     public int getHomeScore() {
         return homeScore;
     }
 
+    //
     public void setHomeScore(int homeScore) {
         this.homeScore = homeScore;
     }
 
+    //
     public int getAwayScre() {
         return awayScore;
     }
 
+    //
     public void setAwayScre(int awayScre) {
         this.awayScore = awayScre;
     }
