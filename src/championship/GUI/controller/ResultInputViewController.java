@@ -45,6 +45,15 @@ public class ResultInputViewController implements Initializable {
     }
 
     /**
+     * Saves the result input when the user presses the Record Match button.
+     *
+     * @param event
+     */
+    @FXML
+    public void handleRecordMtcButton(ActionEvent event) {
+    }
+
+    /**
      * Closes the window when you press the cancel button.
      *
      * @param event
@@ -83,8 +92,4 @@ public class ResultInputViewController implements Initializable {
 //            stage.close();
 //        }
 //    }
-    @FXML
-    private void handleRecordMtcButton(ActionEvent event) {
-    }
-
 }

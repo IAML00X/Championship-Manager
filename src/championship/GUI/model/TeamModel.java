@@ -77,7 +77,7 @@ public class TeamModel {
      * @param name
      */
     public void addTeam(Team team) {
-        teammanager.writeTeams(items);
+        //teammanager.writeTeams(items);
         items.add(team);
     }
 

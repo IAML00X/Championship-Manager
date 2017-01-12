@@ -8,7 +8,6 @@ package championship.BLL;
 import championship.BE.Team;
 import championship.DAL.TeamDAO;
 import java.io.IOException;
-import java.util.List;
 
 /**
  *
@@ -31,13 +30,13 @@ public class TeamManager {
         return team;
     }
 
-    public List<Team> getAll() {
-        return teamData.readObjData("save.ser");
-    }
-
-    public void writeTeams(List<Team> teams) {
-        teamData.writeObjData(teams, "save.ser");
-    }
+//    public List<Team> getAll() {
+//        return teamData.readObjData("save.ser");
+//    }
+//
+//    public void writeTeams(List<Team> teams) {
+//        teamData.writeObjData(teams, "save.ser");
+}
 //    
 //    /**
 //     * logic part of the deserialize function, calls it from the DAL when it, itself is called from the GUI
@@ -69,4 +68,4 @@ public class TeamManager {
 //    public List<Team> GetAllTeams() throws IOException, FileNotFoundException, ClassNotFoundException {
 //        return tDAO.deserialize();
 //    }
-}
+
