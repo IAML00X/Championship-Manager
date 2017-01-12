@@ -8,6 +8,8 @@ package championship.BLL;
 import championship.BE.Team;
 import championship.GUI.model.TeamModel;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -29,10 +31,22 @@ public class TeamManager {
         return team;
     }
 
-    public void createGroups() {
+    public void createGroups(ArrayList<Team> teams) {
+        Collections.shuffle(teams);
         TeamModel tm = TeamModel.getInstance();
+        int count = 0;
         for (Team team : tm.getTeams()) {
-            tm.getGroupA().add(team);
+            if (count == 0) {
+                tm.getGroupA().add(team);
+            } else if (count == 1) {
+                tm.getGroupB().add(team);
+            } else if (count == 2) {
+                tm.getGroupC().add(team);
+            } else if (count == 3) {
+                tm.getGroupD().add(team);
+                count = -1;
+            }
+            count++;
 
         }
     }

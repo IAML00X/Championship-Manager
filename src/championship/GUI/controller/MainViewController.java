@@ -66,6 +66,8 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, Integer> colGlScrd;
 
     ObservableList<Team> teams = FXCollections.observableArrayList();
+    @FXML
+    private Button startTournamentButton;
 
     /**
      * Initializes the controller class.
@@ -89,6 +91,7 @@ public class MainViewController implements Initializable {
                 new PropertyValueFactory("matchesPlayed"));
         colGlScrd.setCellValueFactory(
                 new PropertyValueFactory("goalsScored"));
+
         setTeams();
 
         teams.add(new Team("Sædding", 0, 0, 0, 0, 0, 0, 0));
@@ -108,7 +111,6 @@ public class MainViewController implements Initializable {
         teams.add(new Team("Gjesing", 0, 0, 0, 0, 0, 0, 0));
         teams.add(new Team("Danmarksgade", 0, 0, 0, 0, 0, 0, 0));
         teams.add(new Team("Norvang", 0, 0, 0, 0, 0, 0, 0));
-
     }
 
     public void setTeams() {
@@ -226,6 +228,10 @@ public class MainViewController implements Initializable {
     @FXML
     public void closeApp(ActionEvent event) {
         Platform.exit();
+    }
+
+    @FXML
+    private void handleStartTournamentButton(ActionEvent event) {
     }
 
 }

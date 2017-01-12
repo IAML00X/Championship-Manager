@@ -5,6 +5,8 @@
  */
 package championship.GUI.controller;
 
+import championship.BE.Team;
+import championship.GUI.model.TeamModel;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -12,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -62,17 +65,29 @@ public class GroupViewController implements Initializable {
     private TableColumn<?, ?> lostD;
     @FXML
     private TableColumn<?, ?> pointsD;
+    @FXML
+    private TableView<Team> groupATbl;
+    @FXML
+    private TableView<Team> groupBTbl;
+    @FXML
+    private TableView<Team> groupCTbl;
+    @FXML
+    private TableView<Team> groupDTbl;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        TeamModel tm = TeamModel.getInstance();
+        groupATbl.setItems(tm.getGroupA());
+        groupBTbl.setItems(tm.getGroupB());
+        groupCTbl.setItems(tm.getGroupC());
+        groupDTbl.setItems(tm.getGroupD());
+    }
 
     @FXML
     private void closeButtonAction(ActionEvent event) {
     }
-    
+
 }

@@ -62,7 +62,7 @@
                   <LinearGradient endX="1.0" endY="1.0" startX="0.9951456310679612" startY="0.32038834951456313">
                      <stops>
                         <Stop color="#1057f2" />
-                        <Stop color="#121822" offset="1.0" />
+                        <Stop color="#300be7" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </textFill>
@@ -134,5 +134,16 @@
             <Image url="@fodbold.png" />
          </image>
       </ImageView>
+      <Button fx:id="startTournamentButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStartTournamentButton" prefHeight="42.0" prefWidth="142.0" text="Start Tournament">
+         <textFill>
+            <LinearGradient endX="0.6359223300970873" endY="1.0" startX="0.6359223300970874" startY="0.40776699029126207">
+               <stops>
+                  <Stop color="#300be7" />
+                  <Stop color="#300be7" offset="0.007246376811594203" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
    </children>
 </AnchorPane>
