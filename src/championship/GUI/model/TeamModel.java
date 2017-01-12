@@ -28,30 +28,6 @@ public class TeamModel {
 
     private ArrayList<Team> finalTeams;
 
-    public ArrayList<Team> getQuarterFinalTeams() {
-        return quarterFinalTeams;
-    }
-
-    public void setQuarterFinalTeams(ArrayList<Team> quarterFinalTeams) {
-        this.quarterFinalTeams = quarterFinalTeams;
-    }
-
-    public ArrayList<Team> getSemiFinalTeams() {
-        return semiFinalTeams;
-    }
-
-    public void setSemiFinalTeams(ArrayList<Team> semiFinalTeams) {
-        this.semiFinalTeams = semiFinalTeams;
-    }
-
-    public ArrayList<Team> getFinalTeams() {
-        return finalTeams;
-    }
-
-    public void setFinalTeams(ArrayList<Team> finalTeams) {
-        this.finalTeams = finalTeams;
-    }
-
     private TeamManager teammanager;
 
     /**
@@ -96,6 +72,30 @@ public class TeamModel {
     public void setTeamNames(List<Team> teams) {
         items.clear();
         items.addAll(teams);
+    }
+
+    public ArrayList<Team> getQuarterFinalTeams() {
+        return quarterFinalTeams;
+    }
+
+    public void setQuarterFinalTeams(ArrayList<Team> quarterFinalTeams) {
+        this.quarterFinalTeams = quarterFinalTeams;
+    }
+
+    public ArrayList<Team> getSemiFinalTeams() {
+        return semiFinalTeams;
+    }
+
+    public void setSemiFinalTeams(ArrayList<Team> semiFinalTeams) {
+        this.semiFinalTeams = semiFinalTeams;
+    }
+
+    public ArrayList<Team> getFinalTeams() {
+        return finalTeams;
+    }
+
+    public void setFinalTeams(ArrayList<Team> finalTeams) {
+        this.finalTeams = finalTeams;
     }
 
 }
