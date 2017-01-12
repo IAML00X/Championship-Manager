@@ -6,22 +6,26 @@
 package championship.BE;
 
 import java.io.Serializable;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  *
  * @author IAMLUX
  */
 public class Team implements Serializable {
-    
-    private String name;
-    private int id;
-    private int points;
-    private int goalsScored;
-    private int goalsRecieved;
-    private int matchesPlayed;
-    private int wins;
-    private int draws;
-    private int losses;
+
+    private final StringProperty name = new SimpleStringProperty();
+    private final IntegerProperty id = new SimpleIntegerProperty();
+    private final IntegerProperty points = new SimpleIntegerProperty();
+    private final IntegerProperty goalsScored = new SimpleIntegerProperty();
+    private final IntegerProperty goalsRecieved = new SimpleIntegerProperty();
+    private final IntegerProperty matchesPlayed = new SimpleIntegerProperty();
+    private final IntegerProperty wins = new SimpleIntegerProperty();
+    private final IntegerProperty draws = new SimpleIntegerProperty();
+    private final IntegerProperty losses = new SimpleIntegerProperty();
 
     /**
      * Contructor for Team class with the name parameter.
@@ -29,93 +33,126 @@ public class Team implements Serializable {
      * @param name
      */
     public Team(String name, int points, int goalsScored, int goalsRecieved, int matchesPlayed, int wins, int draws, int losses) {
-        this.name = name;
-        this.points = points;
-        this.goalsScored = goalsScored;
-        this.goalsRecieved = goalsRecieved;
-        this.matchesPlayed = matchesPlayed;
-        this.wins = wins;
-        this.draws = draws;
-        this.losses = losses;
+        this.name.set(name);
+        this.points.set(points);
+        this.goalsScored.set(goalsScored);
+        this.goalsRecieved.set(goalsRecieved);
+        this.matchesPlayed.set(matchesPlayed);
+        this.wins.set(wins);
+        this.draws.set(draws);
+        this.losses.set(losses);
     }
-    
-        /**
+
+    /**
      * All the getters and setters for the Team class.
      *
      */
-
     public String getName() {
+        return name.get();
+    }
+
+    public void setName(String value) {
+        name.set(value);
+    }
+
+    public StringProperty nameProperty() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getId() {
+        return id.get();
     }
 
-    public int getId() {
+    public void setId(int value) {
+        id.set(value);
+    }
+
+    public IntegerProperty idProperty() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getPoints() {
+        return points.get();
     }
 
-    public int getPoints() {
+    public void setPoints(int value) {
+        points.set(value);
+    }
+
+    public IntegerProperty pointsProperty() {
         return points;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public int getGoalsScored() {
+        return goalsScored.get();
     }
 
-    public int getGoalsScored() {
+    public void setGoalsScored(int value) {
+        goalsScored.set(value);
+    }
+
+    public IntegerProperty goalsScoredProperty() {
         return goalsScored;
     }
 
-    public void setGoalsScored(int goalsScored) {
-        this.goalsScored = goalsScored;
+    public int getGoalsRecieved() {
+        return goalsRecieved.get();
     }
 
-    public int getGoalsRecieved() {
+    public void setGoalsRecieved(int value) {
+        goalsRecieved.set(value);
+    }
+
+    public IntegerProperty goalsRecievedProperty() {
         return goalsRecieved;
     }
 
-    public void setGoalsRecieved(int goalsRecieved) {
-        this.goalsRecieved = goalsRecieved;
+    public int getMatchesPlayed() {
+        return matchesPlayed.get();
     }
 
-    public int getMatchesPlayed() {
+    public void setMatchesPlayed(int value) {
+        matchesPlayed.set(value);
+    }
+
+    public IntegerProperty matchesPlayedProperty() {
         return matchesPlayed;
     }
 
-    public void setMatchesPlayed(int matchesPlayed) {
-        this.matchesPlayed = matchesPlayed;
+    public int getWins() {
+        return wins.get();
     }
 
-    public int getWins() {
+    public void setWins(int value) {
+        wins.set(value);
+    }
+
+    public IntegerProperty winsProperty() {
         return wins;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
+    public int getDraws() {
+        return draws.get();
     }
 
-    public int getDraws() {
+    public void setDraws(int value) {
+        draws.set(value);
+    }
+
+    public IntegerProperty drawsProperty() {
         return draws;
     }
 
-    public void setDraws(int draws) {
-        this.draws = draws;
+    public int getLosses() {
+        return losses.get();
     }
 
-    public int getLosses() {
+    public void setLosses(int value) {
+        losses.set(value);
+    }
+
+    public IntegerProperty lossesProperty() {
         return losses;
     }
-
-    public void setLosses(int losses) {
-        this.losses = losses;
-    }
-
-
 
 }

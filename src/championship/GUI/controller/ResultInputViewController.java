@@ -32,10 +32,8 @@ public class ResultInputViewController implements Initializable {
     @FXML
     private TextField guestTeamGoalTextField;
 
-
-
     public ResultInputViewController() {
-        
+
     }
 
     /**
@@ -85,5 +83,8 @@ public class ResultInputViewController implements Initializable {
 //            stage.close();
 //        }
 //    }
+    @FXML
+    private void handleRecordMtcButton(ActionEvent event) {
+    }
 
 }

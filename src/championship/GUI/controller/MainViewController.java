@@ -31,7 +31,7 @@ import javafx.stage.Stage;
  * @author IAMLUX
  */
 public class MainViewController implements Initializable {
-
+    
     @FXML
     private Button addTeamButton;
     @FXML
@@ -66,13 +66,13 @@ public class MainViewController implements Initializable {
     private TableColumn<Team, Integer> colGlScrd;
     
     ObservableList<Team> teams = FXCollections.observableArrayList();
-    
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
         colGroup.setCellValueFactory(
                 new PropertyValueFactory("group"));
         colName.setCellValueFactory(
@@ -88,11 +88,11 @@ public class MainViewController implements Initializable {
         colMtchPl.setCellValueFactory(
                 new PropertyValueFactory("matchesPlayed"));
         colGlScrd.setCellValueFactory(
-                new PropertyValueFactory("goalsScored"));        
+                new PropertyValueFactory("goalsScored"));
         setTeams();
-
+        
     }
-
+    
     public void setTeams() {
         TeamModel tm = TeamModel.getInstance();
         teams = (ObservableList<Team>) tm.getTeams();
@@ -108,7 +108,7 @@ public class MainViewController implements Initializable {
      */
     @FXML
     public void handleOnButtonActionAddTeam(ActionEvent event) throws IOException {
-
+        
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/AddTeamView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
@@ -132,7 +132,6 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-
 
     /**
      * Opens the view where the use can see the scheduling for the teams
@@ -167,8 +166,6 @@ public class MainViewController implements Initializable {
         stage.show();
     }
 
-
-
     /**
      * Opens the view where the teams can see what group they belong to.
      *
@@ -184,9 +181,9 @@ public class MainViewController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.show();
     }
-    
+
     /**
-     * Opens the view where the user can edit a team name. 
+     * Opens the view where the user can edit a team name.
      *
      * @param event
      * @throws IOException
@@ -195,6 +192,8 @@ public class MainViewController implements Initializable {
     public void updateButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/championship/GUI/view/UpdateView.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
+        UpdateViewController controller = fxmlLoader.getController();
+        controller.setSelectedTeam(mainTblVw.getSelectionModel().getSelectedItem());
         Stage stage = new Stage();
         stage.setTitle("");
         stage.setScene(new Scene(root1));
@@ -210,5 +209,5 @@ public class MainViewController implements Initializable {
     public void closeApp(ActionEvent event) {
         Platform.exit();
     }
-
+    
 }

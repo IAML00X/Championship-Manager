@@ -19,16 +19,41 @@ import javafx.collections.ObservableList;
 public class TeamModel {
 
     private final ObservableList<Team> items;
-    
+
     private static TeamModel instance;
-    
+
     private ArrayList<Team> quarterFinalTeams;
 
     private ArrayList<Team> semiFinalTeams;
 
     private ArrayList<Team> finalTeams;
 
+    public ArrayList<Team> getQuarterFinalTeams() {
+        return quarterFinalTeams;
+    }
+
+    public void setQuarterFinalTeams(ArrayList<Team> quarterFinalTeams) {
+        this.quarterFinalTeams = quarterFinalTeams;
+    }
+
+    public ArrayList<Team> getSemiFinalTeams() {
+        return semiFinalTeams;
+    }
+
+    public void setSemiFinalTeams(ArrayList<Team> semiFinalTeams) {
+        this.semiFinalTeams = semiFinalTeams;
+    }
+
+    public ArrayList<Team> getFinalTeams() {
+        return finalTeams;
+    }
+
+    public void setFinalTeams(ArrayList<Team> finalTeams) {
+        this.finalTeams = finalTeams;
+    }
+
     private TeamManager teammanager;
+
     /**
      * Constructor
      */

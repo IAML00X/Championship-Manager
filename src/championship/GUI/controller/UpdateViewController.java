@@ -30,30 +30,32 @@ public class UpdateViewController implements Initializable {
     private Button saveBtn;
     @FXML
     private TextField teamNmTxt;
-    
+
     private Team selectedTeam;
-    
+
     TeamModel teammodel;
 
     private TeamManager teammanager;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-    }    
-    
+
+    }
+
     //public void Update
-    
-   @FXML
-   public void saveTeam(ActionEvent event)
-   {
-    
+    @FXML
+    public void saveTeam(ActionEvent event) {
+        selectedTeam.setName(teamNmTxt.getText());
+    }
 
+    public void setSelectedTeam(Team selectedTeam) {
+        this.selectedTeam = selectedTeam;
+        teamNmTxt.setText(selectedTeam.getName());
+    }
 
-   }
-    
 //    public void getTeamInfo(Team selectedTeam)
 //    {
 //        this.teamNmTxt.getText(selectedTeam.getName());
@@ -73,12 +75,9 @@ public class UpdateViewController implements Initializable {
      *
      * @param event
      */
-    public void cancelButton(ActionEvent event)
-    {
+    public void cancelButton(ActionEvent event) {
         Stage stage = (Stage) closeBtn.getScene().getWindow();
         stage.close();
     }
 
-
-    
 }
