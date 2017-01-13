@@ -121,6 +121,16 @@ public class MainViewController implements Initializable {
     }
 
     /**
+     * Starts the Tournament.
+     *
+     * @param event
+     */
+    @FXML
+    public void handleStartTournamentButton(ActionEvent event) {
+
+    }
+
+    /**
      * Opens the view where the user can add a team.
      *
      * @param event
@@ -228,10 +238,6 @@ public class MainViewController implements Initializable {
     @FXML
     public void closeApp(ActionEvent event) {
         Platform.exit();
-    }
-
-    @FXML
-    private void handleStartTournamentButton(ActionEvent event) {
     }
 
 }
