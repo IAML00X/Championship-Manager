@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="334.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.ResultInputViewController">
+   <children>
+      <TextField fx:id="matchNrTextField" layoutX="131.0" layoutY="38.0" prefHeight="25.0" prefWidth="187.0" />
+      <Label layoutX="180.0" layoutY="15.0" text="Match nr.">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Button fx:id="cancelButton" layoutX="318.0" layoutY="281.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" AnchorPane.bottomAnchor="22.0">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button fx:id="saveButton" layoutX="111.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleRecordMtcButton" text="Record Match" AnchorPane.bottomAnchor="22.0">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.6341463414634146">
+               <stops>
+                  <Stop color="#240db9" />
+                  <Stop color="#2c2b2b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="6.0" layoutY="3.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="6.0" layoutY="278.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="397.0" layoutY="278.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="397.0" layoutY="3.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="homeTeamWonButton" layoutX="152.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleHomeTeamWonButton" text="Home Team Won">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2312bf" />
+                  <Stop color="#141313" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="drawButton" layoutX="152.0" layoutY="215.0" mnemonicParsing="false" onAction="#handleDrawButton" text="Draw">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2312bf" />
+                  <Stop color="#141313" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="awayTeamWonButton" layoutX="152.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleAwayTeamWonButton" text="Away Team Won">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2312bf" />
+                  <Stop color="#141313" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

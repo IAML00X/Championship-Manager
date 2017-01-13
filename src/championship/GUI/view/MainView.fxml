@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="championship.GUI.controller.MainViewController">
+   <children>
+      <ButtonBar layoutX="-14.0" layoutY="621.0" prefHeight="50.0" prefWidth="1229.0">
+        <buttons>
+            <Button fx:id="addTeamButton" minWidth="0.0" mnemonicParsing="false" onAction="#handleOnButtonActionAddTeam" prefHeight="31.0" prefWidth="80.0" text="Add Team ">
+               <textFill>
+                  <LinearGradient endX="0.0728155339805825" endY="0.8058252427184467" startX="0.09223300970873782" startY="0.25242718446601936">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="addMatchResultButton" mnemonicParsing="false" onAction="#matchResultButtonAction" prefHeight="31.0" prefWidth="200.0" text="Add Match Result ">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.9951456310679612" startY="0.10679611650485438">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+          <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="31.0" text="Update">
+               <textFill>
+                  <LinearGradient endX="0.0728155339805825" endY="0.8058252427184467" startX="0.09223300970873782" startY="0.25242718446601936">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="viewGroupButton" mnemonicParsing="false" onAction="#viewGoupButtonAction" text="View Group ">
+               <textFill>
+                  <LinearGradient endX="0.0728155339805825" endY="0.8058252427184467" startX="0.09223300970873782" startY="0.25242718446601936">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="viewMatchesButton" mnemonicParsing="false" onAction="#matchSchedulingButton" prefHeight="31.0" text="View Matches ">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.9951456310679612" startY="0.32038834951456313">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#300be7" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="finalsBttn" mnemonicParsing="false" onAction="#buttonActionFinalResults" text="Finals">
+               <textFill>
+                  <LinearGradient endX="0.8106796116504854" endY="1.0" startX="0.7864077669902912" startY="0.4223300970873786">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="204.0" text="Delete">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.9951456310679612" startY="0.10679611650485438">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeApp" prefHeight="31.0" prefWidth="0.0" text="Close">
+               <textFill>
+                  <LinearGradient endX="0.0728155339805825" endY="0.8058252427184467" startX="0.09223300970873782" startY="0.25242718446601936">
+                     <stops>
+                        <Stop color="#1057f2" />
+                        <Stop color="#121822" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="mainTblVw" layoutX="9.0" layoutY="73.0" prefHeight="546.0" prefWidth="1208.0">
+        <columns>
+          <TableColumn fx:id="colGroup" prefWidth="115.0" text="Group" />
+            <TableColumn fx:id="colName" prefWidth="329.0" text="Team" />
+            <TableColumn fx:id="colPoints" prefWidth="93.0" text="Points" />
+            <TableColumn fx:id="colWon" prefWidth="117.0" text="Won" />
+            <TableColumn fx:id="colLost" prefWidth="121.0" text="Lost" />
+            <TableColumn fx:id="colDraw" prefWidth="118.0" text="Draw" />
+            <TableColumn fx:id="colMtchPl" prefWidth="178.0" text="Matches Played" />
+            <TableColumn fx:id="colGlScrd" prefWidth="136.0" text="Goals  Scored" />
+        </columns>
+      </TableView>
+      <Label layoutX="449.0" layoutY="14.0" prefHeight="49.0" prefWidth="303.0" text="Football Champs ">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.46116504854368934" focusDistance="0.09756097560975618" radius="0.6463414634146342">
+               <stops>
+                  <Stop color="#1057f2" />
+                  <Stop color="#121822" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="341.0" layoutY="-1.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="746.0" layoutY="-1.0">
+         <image>
+            <Image url="@fodbold.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="startTournamentButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStartTournamentButton" prefHeight="42.0" prefWidth="142.0" text="Start Tournament">
+         <textFill>
+            <LinearGradient endX="0.6359223300970873" endY="1.0" startX="0.6359223300970874" startY="0.40776699029126207">
+               <stops>
+                  <Stop color="#300be7" />
+                  <Stop color="#300be7" offset="0.007246376811594203" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>
