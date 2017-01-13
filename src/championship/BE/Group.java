@@ -69,7 +69,7 @@ public class Group {
     }
 
     /**
-     * Group of 3 where every team must team eachother twice.
+     * Group of 3 where every team must team each other twice.
      */
     private void groupOf3() {
         homeTeams1 = new int[]{
@@ -81,7 +81,7 @@ public class Group {
     }
 
     /**
-     * Group of 4 where every team must team eachother twice.
+     * Group of 4 where every team must team each other twice.
      */
     private void groupOf4() {
         homeTeams1 = new int[]{

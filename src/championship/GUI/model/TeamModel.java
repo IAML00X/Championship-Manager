@@ -49,6 +49,12 @@ public class TeamModel {
 
     }
 
+    /**
+     * The Singleton we use for ease of access to the model. This was a
+     * breakthrough.
+     *
+     * @return
+     */
     public static TeamModel getInstance() {
         if (instance == null) {
             instance = new TeamModel();
@@ -76,49 +82,99 @@ public class TeamModel {
     }
 
     /**
-     * Sets the name of the Team, loop for forced update.
+     * Sets the name of the Team.
      */
     public void setTeamNames(List<Team> teams) {
         this.teams.clear();
         this.teams.addAll(teams);
     }
 
+    /**
+     * Was meant to return a list of Teams who made it to the quarterfinals.
+     *
+     * @return
+     */
     public ArrayList<Team> getQuarterFinalTeams() {
         return quarterFinalTeams;
     }
 
+    /**
+     * Sets the Teams who made it to the quarterfinals.
+     *
+     * @param quarterFinalTeams
+     */
     public void setQuarterFinalTeams(ArrayList<Team> quarterFinalTeams) {
         this.quarterFinalTeams = quarterFinalTeams;
     }
 
+    /**
+     * Was meant to return a list of Teams who made it to the semifinals.
+     *
+     * @return
+     */
     public ArrayList<Team> getSemiFinalTeams() {
         return semiFinalTeams;
     }
 
+    /**
+     * Sets the Teams who made it to the semifinals.
+     *
+     * @param semiFinalTeams
+     */
     public void setSemiFinalTeams(ArrayList<Team> semiFinalTeams) {
         this.semiFinalTeams = semiFinalTeams;
     }
 
+    /**
+     * Was meant to return a list of Teams who made it to the finals.
+     *
+     * @return
+     */
     public ArrayList<Team> getFinalTeams() {
         return finalTeams;
     }
 
+    /**
+     * Sets the Teams who made it to the finals.
+     *
+     * @param finalTeams
+     */
     public void setFinalTeams(ArrayList<Team> finalTeams) {
         this.finalTeams = finalTeams;
     }
 
+    /**
+     * Returns a list of Teams in Group A.
+     *
+     * @return
+     */
     public ObservableList<Team> getGroupA() {
         return groupA;
     }
 
+    /**
+     * Returns a list of Teams in Group B.
+     *
+     * @return
+     */
     public ObservableList<Team> getGroupB() {
         return groupB;
     }
 
+    /**
+     * Returns a list of Teams in Group C.
+     *
+     * @return
+     */
     public ObservableList<Team> getGroupC() {
         return groupC;
     }
 
+    /**
+     * Returns a list of Teams in Group D.
+     *
+     * @return
+     */
     public ObservableList<Team> getGroupD() {
         return groupD;
     }

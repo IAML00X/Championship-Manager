@@ -31,6 +31,11 @@ public class TeamManager {
         return team;
     }
 
+    /**
+     * This will sort teams randomly into 4 groups.
+     *
+     * @param teams
+     */
     public void createGroups(ArrayList<Team> teams) {
         Collections.shuffle(teams);
         TeamModel tm = TeamModel.getInstance();
