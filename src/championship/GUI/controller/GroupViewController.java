@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -24,47 +25,49 @@ import javafx.scene.control.TableView;
 public class GroupViewController implements Initializable {
 
     @FXML
-    private TableColumn<?, ?> teamA;
+    private TableColumn<Team, String> teamA;
     @FXML
-    private TableColumn<?, ?> wonA;
+    private TableColumn<Team, Integer> wonA;
     @FXML
-    private TableColumn<?, ?> drawA;
+    private TableColumn<Team, Integer> drawA;
     @FXML
-    private TableColumn<?, ?> lostA;
+    private TableColumn<Team, Integer> lostA;
     @FXML
-    private TableColumn<?, ?> pointsA;
+    private TableColumn<Team, Integer> pointsA;
+    
     @FXML
-    private Button closeButton;
+    private TableColumn<Team, String> teamB;
     @FXML
-    private TableColumn<?, ?> teamB;
+    private TableColumn<Team, Integer> wonB;
     @FXML
-    private TableColumn<?, ?> wonB;
+    private TableColumn<Team, Integer> drawB;
     @FXML
-    private TableColumn<?, ?> drawB;
+    private TableColumn<Team, Integer> lostB;
     @FXML
-    private TableColumn<?, ?> lostB;
+    private TableColumn<Team, Integer> pointsB;
+    
     @FXML
-    private TableColumn<?, ?> pointsB;
+    private TableColumn<Team, String> teamC;
     @FXML
-    private TableColumn<?, ?> teamC;
+    private TableColumn<Team, Integer> wonC;
     @FXML
-    private TableColumn<?, ?> wonC;
+    private TableColumn<Team, Integer> drawC;
     @FXML
-    private TableColumn<?, ?> drawC;
+    private TableColumn<Team, Integer> lostC;
     @FXML
-    private TableColumn<?, ?> lostC;
+    private TableColumn<Team, Integer> pointsC;
+    
     @FXML
-    private TableColumn<?, ?> pointsC;
+    private TableColumn<Team, String> teamD;
     @FXML
-    private TableColumn<?, ?> teamD;
+    private TableColumn<Team, Integer> wonD;
     @FXML
-    private TableColumn<?, ?> wonD;
+    private TableColumn<Team, Integer> drawD;
     @FXML
-    private TableColumn<?, ?> drawD;
+    private TableColumn<Team, Integer> lostD;
     @FXML
-    private TableColumn<?, ?> lostD;
-    @FXML
-    private TableColumn<?, ?> pointsD;
+    private TableColumn<Team, Integer> pointsD;
+    
     @FXML
     private TableView<Team> groupATbl;
     @FXML
@@ -73,21 +76,38 @@ public class GroupViewController implements Initializable {
     private TableView<Team> groupCTbl;
     @FXML
     private TableView<Team> groupDTbl;
+    @FXML
+    private Button closeButton;
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+        
         TeamModel tm = TeamModel.getInstance();
         groupATbl.setItems(tm.getGroupA());
         groupBTbl.setItems(tm.getGroupB());
         groupCTbl.setItems(tm.getGroupC());
         groupDTbl.setItems(tm.getGroupD());
     }
+    
+    
+    
+    
 
+    /**
+     * Closes the window when you press the cancel button.
+     *
+     * @param event
+     */
     @FXML
-    private void closeButtonAction(ActionEvent event) {
+    public void closeButtonAction(ActionEvent event) 
+    {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
     }
+
 
 }

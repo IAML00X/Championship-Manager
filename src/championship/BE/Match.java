@@ -15,6 +15,11 @@ public class Match {
     Team awayTeam;
     int homeScore;
     int awayScore;
+    public final int WinnerPoints = 3;
+
+    public final int DrawPoints = 1;
+
+    public final int LossingPoints = 0;
 
     public Match(Team homeTeam, Team awayTeam, int homeScore, int awayScre) {
         this.homeTeam = homeTeam;

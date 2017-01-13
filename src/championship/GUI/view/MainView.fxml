@@ -47,7 +47,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="viewGroupButton" mnemonicParsing="false" onAction="#viewGoupButtonAction" text="View Goup ">
+            <Button fx:id="viewGroupButton" mnemonicParsing="false" onAction="#viewGoupButtonAction" text="View Group ">
                <textFill>
                   <LinearGradient endX="0.0728155339805825" endY="0.8058252427184467" startX="0.09223300970873782" startY="0.25242718446601936">
                      <stops>
